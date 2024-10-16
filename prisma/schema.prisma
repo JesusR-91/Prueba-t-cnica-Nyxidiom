@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./mydatabase.db" 
+}
+
+// Define los modelos
+model User {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  tasks        Task[]  
+  subtasks     Subtask[]
+}
+
+model Task {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  status      String   @default("Todo")
+  priority    String   @default("Low")  
+  userId      Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  user        User      @relation(fields: [userId], references: [id])
+  subtasks    Subtask[] 
+}
+
+model Subtask {
+  id        Int      @id @default(autoincrement())
+  taskId    Int
+  title     String
+  completed Boolean  @default(false)
+  status    String   @default("Todo")
+  priority  String   @default("Low") 
+  userId    Int
+  task      Task      @relation(fields: [taskId], references: [id])
+  user      User      @relation(fields: [userId], references: [id])
+}
