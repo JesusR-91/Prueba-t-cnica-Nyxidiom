@@ -43,6 +43,9 @@ Sigue los siguientes pasos para instalar y ejecutar la aplicación localmente:
 ## Problemas Encontrados
 Esta es la primera vez que trabajo con Remix, Prisma y Sqlite3, y me he encontrado con algunos problemas de conexión a la base de datos. A continuación, se muestra el error que aparece en la consola:
 
+[image](https://github.com/user-attachments/assets/6fd164b9-4f31-4905-88de-6f02a52b25a4)
+
+
 He intentado varias soluciones, pero lamentablemente no he podido resolver este problema debido a mi falta de experiencia con estas herramientas en particular. Como resultado, decidí continuar el desarrollo a nivel de componentes y funcionalidades sin la integración de la base de datos.
 
 ## Reflexiones
