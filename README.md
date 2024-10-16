@@ -54,6 +54,8 @@ See https://remix.run/docs/en/main/guides/vite#splitting-up-client-and-server-co
 
 He intentado varias soluciones, pero lamentablemente no he podido resolver este problema debido a mi falta de experiencia con estas herramientas en particular. Como resultado, decidí continuar el desarrollo a nivel de componentes y funcionalidades sin la integración de la base de datos.
 
+No he querido dedicarle más tiempo no por falta de ganas, sino más bien porque creo haber llegado a un punto muerto en el problema. Con una mínima indicación entiendo que podría haber continuado, pero como digo me ha sido imposible encontrar solución.
+
 ## Reflexiones
 En otros proyectos, suelo desarrollar el backend primero y luego el frontend, pero Remix parece tener un enfoque diferente. Escogí Sqlite3 con la intención de facilitar la ejecución local de la aplicación sin necesidad de realizar despliegues complejos, y Prisma como ORM para manejar la conexión. Sin embargo, algo en la configuración no parece estar funcionando correctamente.
 
